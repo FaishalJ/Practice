@@ -1,0 +1,28 @@
+@use "../abstract" as a;
+
+// section 1 navigation menu button
+.btn__menu {
+  position: fixed;
+  top: 3%;
+  left: 1%;
+  width: 5rem;
+  height: 5rem;
+  z-index: 100;
+  @include a.flex-d;
+  cursor: pointer;
+  transition: all .5s ease-in-out;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    width: 4rem;
+    height: .2rem;
+    background-color: var(--white);
+    transition: transform .3s ease;
+  }
+
+  &::before {
+    top: 1.5rem;
+  }
+}

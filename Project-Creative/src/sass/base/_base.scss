@@ -1,0 +1,13 @@
+@use "../abstract" as a;
+
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: inherit;
+}
+
+body {
+  background-color: a.$color-white-2;
+}

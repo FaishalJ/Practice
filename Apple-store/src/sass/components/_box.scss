@@ -1,0 +1,68 @@
+@use "../abstract" as a;
+
+.header-box-wrapper {
+  width: 30rem;
+  height: 60rem;
+  perspective: 1000rem;
+
+  .box {
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transform-origin: center;
+    position: relative;
+    transition: transform .5s ease;
+
+    &-face {
+      @include a.flex-d;
+      width: 100%;
+      height: 100%;
+      background-color: var(--white);
+      position: absolute;
+      backface-visibility: visible;
+
+      &-front {
+        transform: translateZ(10rem);
+        img {
+          width: 100%;
+        }
+      }
+
+      &-back {
+        color: var(--aqua);
+        font-size: 10rem;
+        transform: rotateY(180deg);
+      }
+
+      &-left {
+        color: var(--red);
+        transform: rotateY(-90deg) translateZ(0rem);
+        transform-origin: left;
+        width: 10rem;
+        border-right: 1px solid var(--black-grey-3);
+        border-left: 1px solid var(--black-grey-3);
+      }
+      
+      &-right {
+        color: var(--red);
+        transform: rotateY(90deg) translateZ(20rem);
+        transform-origin: right;
+        width: 10rem;
+        border-right: 1px solid var(--black-grey-3);
+        border-left: 1px solid var(--black-grey-3);
+      }
+      
+
+      &-top {
+        height: 10rem;
+        transform: rotateX(90deg) translateZ(5rem) translateY(5rem);
+      }
+      
+      &-bottom {
+        height: 10rem;
+        transform: rotateX(-90deg) translateZ(55rem) translateY(-5rem);;
+      }
+    }
+  }
+
+}

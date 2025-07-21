@@ -1,0 +1,32 @@
+@use "../abstract" as a;
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+
+  @media only screen and (max-width: a.$bp-xlarge) {
+    font-size: 56.25%;
+  }
+  @media only screen and (max-width: a.$bp-medium) {
+    font-size: 50%;
+  }
+  @media only screen and (max-width: a.$bp-sm) {
+    font-size: 43.75%;
+  }
+}
+
+body {
+  font-family: "Jost", sans-serif;
+  font-weight: 400;
+  font-size: 1.6rem;
+}

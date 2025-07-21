@@ -1,0 +1,60 @@
+@use "../abstract" as a;
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  font-size: 62.5%;
+}
+
+body {
+  font-weight: 400;
+  font-family: "Special Elite", sans-serif;
+  font-size: 1.6rem;
+}
+
+.container {
+  background-color: var(--grey-1);
+  display: grid;
+  row-gap: 3rem;
+  padding-right: 3rem;
+  overflow-X: hidden;
+}
+
+.wrapper {
+  perspective: 100rem;
+}
+
+section {
+  transition: all .5s ease-in-out;
+}
+// JAVASCRIPT HELPER CLASSES
+.container.rotate section {
+  transform-origin: left;
+  transform: rotateY(15deg);
+  margin-left: 14.5vw;
+}
+
+.container.rotate nav {
+  transform: translateX(100%);
+}
+
+.container.rotate .btn__menu::before {
+  transform: rotateZ(45deg);
+  top: unset;
+}
+
+.container.rotate .btn__menu::after {
+  transform: rotateZ(-45deg);
+}
+.container.rotate .btn__menu {
+  left: 15%;
+  transform: rotateZ(180deg);
+}

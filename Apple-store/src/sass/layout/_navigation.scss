@@ -1,0 +1,39 @@
+@use "../abstract" as a;
+
+.nav {
+  max-width: 100%;
+  color: var(--black-2);
+  display: flex;
+  padding: 2rem;
+  z-index: 100;
+
+  &-logo {
+    font-size: 10rem;
+    cursor: pointer;
+  }
+
+  &-links {
+    margin-left: auto;
+    list-style: none;
+    display: flex;
+    gap: 5rem;
+    margin-right: 30rem;
+    z-index: 100;
+  }
+
+  &-link {
+    &:link,
+    &:visited {
+      display: inline-block;
+      text-decoration: none;
+      color: inherit;
+      font-size: 2rem;
+      transition: transform 0.5s ease-in;
+    }
+    
+    &:hover,
+    &:active {
+      transform: scale(1.5);
+    }
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "name": "thewhinehouse",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html"
+  },
+  "keywords": [],
+  "author": "Jaffar",
+  "license": "ISC",
+  "dependencies": {
+    "parcel": "^2.10.0",
+    "sass": "^1.69.3"
+  },
+  "devDependencies": {
+    "@parcel/transformer-sass": "^2.10.0"
+  }
+}

@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <!-- font google-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Vollkorn:wght@400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+  <!--  -->
+  <title>Road house</title>
+  <link href="src/style.css" rel="stylesheet" type="text/css" />
+  <script defer src="src/script.js"></script>
+</head>
+
+<body>
+  <!-- main-container -->
+  <div class="container">
+    <!-- nav-menu -->
+    <btn class="btn__nav"><span></span></btn>
+
+    <!-- NAV -->
+    <nav class="nav">
+      <ul class="nav__list">
+        <li class="nav__el nav__el-1"><a href="#" class="nav__link">home</a></li>
+        <li class="nav__el nav__el-2"><a href="#" class="nav__link">tours</a></li>
+        <li class="nav__el nav__el-3"><a href="#" class="nav__link">about us</a></li>
+        <li class="nav__el nav__el-4"><a href="#" class="nav__link">offer</a></li>
+        <li class="nav__el nav__el-5"><a href="#" class="nav__link">contact</a></li>
+      </ul>
+    </nav>
+
+    <!-- HEADER -->
+    <header class="header">
+      <h2 class="title__road">
+        <span class="title__road-1">T</span>
+        <span class="title__road-2">H</span>
+        <span class="title__road-3">E</span>
+        <span class="title__road-4">R</span>
+        <span class="title__road-5">O</span>
+        <span class="title__road-6">A</span>
+        <span class="title__road-7">D</span>
+      </h2>
+      <div class="header__description">
+        <h1 class="title__primary">around the world</h1>
+        <p>"traveling - it leaves you speechless, then turns you into a storyteller"</p>
+      </div>
+      <img src="src/images/air-balloon.png" alt="air baloon">
+    </header>
+
+    <!-- POPULAR TOURS -->
+    <section class="tours">
+
+      <h1 class="title__tours">The Most Popular Tours</h1>
+
+      <div class="tours__cards">
+        <div class="tours-card">
+          <!-- card-1 -->
+          <div class="tours-card-front">
+            <img src="src/images/forest.jpg" alt="forest images">
+            <h3>The wild forest</h3>
+            <ul>
+              <li>7 days tour</li>
+              <li>Up to 20 people</li>
+              <li>4 tour guides</li>
+              <li>Sleep in private tents</li>
+              <li>Difficult: medium</li>
+            </ul>
+          </div>
+
+          <div class="tours-card-back">
+            <p>$439</p>
+            <button>Booking</button>
+          </div>
+        </div>
+        <!-- card-2 -->
+        <div class="tours-card">
+          <div class="tours-card-front">
+            <img src="src/images/river.jpg" alt="forest images">
+            <h3>along the river</h3>
+            <ul>
+              <li>9 days tour</li>
+              <li>Up to 30 people</li>
+              <li>7 tour guides</li>
+              <li>Sleep in private tents</li>
+              <li>Difficult: hard</li>
+            </ul>
+          </div>
+
+          <div class="tours-card-back">
+            <p>$499</p>
+            <button>Booking</button>
+          </div>
+        </div>
+        <!-- card-3 -->
+        <div class="tours-card">
+          <div class="tours-card-front">
+            <img src="src/images/sea.jpg" alt="forest images">
+            <h3>The island beach</h3>
+            <ul>
+              <li>5 days tour</li>
+              <li>Up to 40 people</li>
+              <li>8 tour guides</li>
+              <li>Sleep hotel</li>
+              <li>Difficult: easy</li>
+            </ul>
+          </div>
+
+          <div class="tours-card-back">
+            <p>$599</p>
+            <button>Booking</button>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section class="testimonials">
+      <video mute autoplay loop>
+        <source src="src/images/video.mp4" type="video/mp4" />
+        your browser does support the video format
+      </video>
+      <div class="testimonials__block">
+        <figure class="testimonials__fig">
+          <img src="src/images/story-img-1.jpg" alt="">
+          <h4>Mary Jane</h4>
+        </figure>
+        <div class="testimonials__quote">
+          <h2>these were the best days of the year</h2>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur nesciunt nobis facilis. Soluta
+            itaque, aliquid deserunt saepe minus perspiciatis, beatae voluptatibus cumque, expedita quibusdam
+            perferendis. Necessitatibus quae totam eveniet fuga.</p>
+        </div>
+      </div>
+
+      <div class="testimonials__block">
+        <figure class="testimonials__fig">
+          <img src="src/images/story-img-2.jpg" alt="">
+          <h4>Mary Jane</h4>
+        </figure>
+        <div class="testimonials__quote">
+          <h2>i enjoyed this great tour</h2>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur nesciunt nobis facilis. Soluta
+            itaque, aliquid deserunt saepe minus perspiciatis, beatae voluptatibus cumque, expedita quibusdam
+            perferendis. Necessitatibus quae totam eveniet fuga.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta">
+      <h2>contact us</h2>
+      <div class="form">
+        <div class="form-div form__name">
+          <label for="name">FULL NAME *</label>
+          <input type="text" placeholder="Enter Your Name">
+        </div>
+
+        <div class="form__email-phone">
+          <div class="form-div form__email">
+            <label for="email">EMAIL *</label>
+            <input type="email" placeholder="Enter Your Email">
+          </div>
+          <div class="form-div form__phone">
+            <label for="phone">PHONE *</label>
+            <input type="tel" placeholder="Enter Your Phone">
+          </div>
+        </div>
+
+        <div class="form-div form__message">
+          <label for="message">MESSAGE *</label>
+          <textarea name="message" id="message" placeholder="Enter Your Message"></textarea>
+        </div>
+
+        <input type="submit" value="Submit">
+      </div>
+    </section>
+  </div>
+
+</body>
+
+</html>

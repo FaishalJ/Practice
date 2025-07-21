@@ -1,0 +1,33 @@
+@use "../abstract/" as a;
+
+.btn {
+  position: fixed;
+  width: 3rem;
+  height: 3rem;
+  border: none;
+  background-color: rgba(a.$red, .5);
+  color: var(--white);
+  cursor: pointer;
+  border-radius: 50%;
+  font-size: 1.6rem;
+  @include a.flex-d;
+  z-index: 100;
+
+  &:hover {
+    background-color: a.$red;
+  }
+
+  &-left,
+  &-right {
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  &-left {
+    left: 5rem;
+  }
+
+  &-right {
+    right: 5rem;
+  }
+}

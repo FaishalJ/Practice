@@ -1,0 +1,176 @@
+@use "../abstract" as a;
+
+.navigation {
+  position: absolute;
+  top: 0;
+  background-color: var(--bg-main);
+  box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.6);
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.2rem 3rem;
+
+  &__menu {
+    position: fixed;
+    @include a.flex-d;
+    background-color: var(--bg-main);
+    width: 4rem;
+    height: 4rem;
+    right: 3rem;
+    top: 0.5rem;
+    box-shadow: var(--box-shadow-50);
+    z-index: 11;
+    cursor: pointer;
+    transform: translateX(177%);
+    transition: all 0.3s ease-in;
+
+    span {
+      position: absolute;
+      width: 4rem;
+      height: 0.3rem;
+      background-color: var(--white);
+
+      &::before,
+      &::after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: var(--white);
+      }
+
+      &::before {
+        bottom: -1rem;
+      }
+
+      &::after {
+        top: -1rem;
+      }
+    }
+  }
+
+  p {
+    color: var(--white);
+    font-weight: 500;
+    font-size: 1.8rem;
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    gap: 0.2rem;
+  }
+
+  &__links {
+    list-style: none;
+    display: flex;
+    gap: 3rem;
+  }
+
+  &__link {
+    @include a.flex-col;
+    align-items: center;
+    font-size: 1.6rem;
+
+    &:link,
+    &:visited {
+      text-decoration: none;
+      color: var(--white);
+      letter-spacing: 2px;
+      transition: color 0.3s ease;
+    }
+
+    &:hover {
+      color: var(--white);
+    }
+  }
+
+  &__bar {
+    display: block;
+    width: 117%;
+    height: 0.2rem;
+    background-image: linear-gradient(
+      to right,
+      transparent 50%,
+      var(--white) 50%
+    );
+    background-size: 200%;
+    background-position: 0%;
+    transition: background-position 0.3s ease;
+  }
+
+  &__link:hover &__bar {
+    background-position: 100%;
+  }
+
+  &__popup {
+    // position: absolute;
+    position: fixed;
+    width: 30rem;
+    height: 60vh;
+    background: linear-gradient(
+      90deg,
+      rgba(59, 89, 152, 0.9) 0%,
+      rgba(59, 89, 152, 0.8) 100%
+    );
+    top: 0;
+    right: 0;
+    z-index: 10;
+    @include a.flex-d;
+    transform: translateY(-100%);
+    opacity: 0;
+    visibility: hidden;
+    transition: transform 0.3s ease-in;
+
+    ul {
+      display: flex;
+      flex-direction: column;
+      opacity: 1;
+
+      a {
+        font-size: 2.4rem;
+        font-weight: 600;
+
+        &:hover {
+          color: var(--bg-main);
+        }
+      }
+    }
+  }
+
+  @media only screen and (max-width: a.$bp-medium) {
+    &__bar {
+      width: 115%;
+    }
+  }
+
+  @media only screen and (max-width: a.$bp-sm-md) {
+    &__bar {
+      width: 113%;
+    }
+  }
+
+  @media only screen and (max-width: a.$bp-sm-md-2) {
+    &__bar {
+      display: none;
+    }
+  }
+
+  @media only screen and (max-width: a.$bp-sm-md-3) {
+    &__menu {
+      transform: translateX(10%);
+    }
+
+    &__links {
+      opacity: 0;
+      visibility: none;
+    }
+  }
+}
+
+.show {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0%);
+}

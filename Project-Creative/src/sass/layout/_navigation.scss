@@ -1,0 +1,28 @@
+@use "../abstract" as a;
+
+.navigation {
+  display: flex;
+  justify-content: space-around;
+
+  &--link {
+
+    &:link,
+    &:visited {
+      color: a.$color-white;
+      text-decoration: none;
+      font-size: 2rem;
+      font-weight: 600;
+      width: 1px;
+      background-color: lighten(a.$color-aqua-2, 90%);
+      height: 20rem;
+      text-align: center;
+      word-wrap: break-word;
+      transition: width 2.5s;
+    }
+
+    &:hover,
+    &:active {
+      width: 13rem;
+    }
+  }
+}

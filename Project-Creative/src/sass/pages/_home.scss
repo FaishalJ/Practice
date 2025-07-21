@@ -1,0 +1,20 @@
+@use "../abstract" as a;
+
+.section-customer {
+  width: 100%;
+  min-height: 100vh;
+  padding: 3rem 0;
+  // margin-bottom: 10rem;
+}
+
+.section-team {
+  width: 100%;
+  min-height: 100vh;
+  padding: 3rem 0;
+}
+
+.section-contact {
+  width: 100%;
+  min-height: 100vh;
+  padding: 5rem 0;
+}

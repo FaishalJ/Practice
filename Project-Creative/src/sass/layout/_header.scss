@@ -1,0 +1,62 @@
+@use "../abstract" as a;
+
+.header {
+  width: 100%;
+  min-height: 100vh;
+  padding: 3rem 0;
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    background-color: a.$color-aqua;
+    height: 60%;
+    width: 100%;
+    top: 0;
+    z-index: -1;
+  }
+
+
+  /*floating background <div>
+    width: 150vw;
+    height: 150vh;
+    background-color: a.$color-aqua;
+    position: absolute;
+    top: -125vw;
+    left: calc(50%-75vw);
+    border-radius: 45%;
+    animation: rotate 30s infinite;
+
+    <div>::before;
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: darken(a.$color-aqua, 20%);
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 40%;
+    animation: rotate 30s infinite;
+    */
+
+  &-logo {
+    font-size: 15rem;
+    color: a.$color-aqua;
+  }
+
+  @media only screen and (max-width: 62.5em) {
+    min-height: 90vh;
+  }
+
+  @media only screen and (max-width: 43.75em) {
+    min-height: 70vh;
+  }
+
+  @media only screen and (max-width: 40.625em) {
+    min-height: 60vh;
+  }
+
+  @media only screen and (max-width: 34.375em) {
+    min-height: 50vh;
+  }
+}

@@ -1,0 +1,56 @@
+@use "../abstract" as a;
+
+.footer {
+  width: 100%;
+  min-height: 100vh;
+  @include a.flex-cl;
+  justify-content: space-around;
+  align-items: center;
+  background: linear-gradient(rgba(0, 0, 0, .8), rgba(0, 0, 0, .8)), url("../images/bg-section5.jpg") center/cover;
+  box-shadow: var(--shadow-sectn);
+
+  &__form {
+    border: 2rem solid var(--white-3);
+    width: 25vw;
+    display: grid;
+    row-gap: 3rem;
+    padding: 4rem;
+
+    input,
+    textarea {
+      border: 1px solid var(--white-3);
+      padding: 1.5rem 1rem;
+      background-color: transparent;
+      color: var(--white-2);
+
+      &::placeholder {
+        font-size: 1.6rem;
+        color: var(--white-2);
+        font-family: "Special Elite";
+      }
+
+      &:focus {
+        background-color: rgba(255, 255, 255, 0.5);
+        outline: none;
+      }
+    }
+
+    textarea {
+      max-width: 100%;
+      max-height: 10rem;
+    }
+
+    input[type="submit"] {
+      background-color: var(--white-3);
+      font-size: 1.6rem;
+      letter-spacing: 2px;
+      cursor: pointer;
+    }
+    
+  }
+
+  p {
+    font-size: 1.8rem;
+    color: var(--white-3);
+  }
+}

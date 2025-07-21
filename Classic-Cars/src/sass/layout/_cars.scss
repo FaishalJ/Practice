@@ -1,0 +1,53 @@
+@use "../abstract" as a;
+
+.cars {
+  width: 100%;
+  min-height: 100vh;
+  @include a.flex-cl;
+  justify-content: space-around;
+  align-items: center;
+  background-color: var(--white-2);
+  box-shadow: var(--shadow-sectn);
+
+  &__pricing {
+    width: 60vw;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(40rem, 1fr));
+    gap: 7rem;
+  }
+
+  figure {
+    position: relative;
+    padding: 1rem;
+    box-shadow: 2px 2px 8px 0px rgba(0, 0, 0, 0.60);
+
+    h3 {
+      position: absolute;
+      top: 5%;
+      left: 5%;
+      color: var(--white);
+    }
+
+    p {
+      color: var(--grey-2);
+      margin-bottom: 1rem;
+    }
+
+    button {
+      width: 100%;
+      color: var(--white);
+      border: none;
+      background: var(--white);
+      text-shadow: 2px 2px 3px rgb(0, 0, 0);
+      box-shadow: 2px 2px 5px rgba(0, 0, 0, .4);
+      font-size: 1.8rem;
+      padding: .5rem 2rem;
+      font-family: inherit;
+      letter-spacing: 2px;
+    }
+  }
+
+  img {
+    width: 100%;
+  }
+}

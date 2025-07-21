@@ -1,0 +1,15 @@
+{
+  "name": "the-road",
+  "version": "1.0.0",
+  "description": "The road house project",
+  "main": "index.js",
+  "scripts": {
+    "dev": "sass src/sass/main.scss src/style.css -w"
+  },
+  "keywords": [],
+  "author": "Jaffar",
+  "license": "ISC",
+  "dependencies": {
+    "sass": "^1.69.0"
+  }
+}

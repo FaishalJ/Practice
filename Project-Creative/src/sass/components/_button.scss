@@ -1,0 +1,29 @@
+@use "../abstract" as a;
+
+.btn-card {
+  width: 30%;
+  border: none;
+  padding: .5rem 1rem;
+  color: a.$color-white;
+  background-color: a.$color-orange;
+  border-radius:  10rem;
+  cursor: pointer;
+}
+
+.btn-top {
+  border: none;
+  background-color: a.$color-aqua;
+  width: 2rem;
+  height: 2rem;
+  color: a.$color-white;
+  font-size: 1.6rem;
+  border-radius: 50%;
+  cursor: pointer;
+  padding: 2rem;
+  position: fixed;
+  bottom: 5rem;
+  right: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

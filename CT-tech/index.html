@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <title>Coalition-Tech-Skill-test</title>
+    <link href="style.css" rel="stylesheet" />
+    <script defer src="script.js"></script>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="loader"><p>Loading Jessica data...</p></div>
+      <!-- nav -->
+      <nav class="nav">
+        <div class="nav_logo">
+          <img src="img/TestLogo.png" alt="Tech.care logo" />
+        </div>
+
+        <ul class="nav_list">
+          <li class="nav_el">
+            <a href="#" class="nav_link"
+              ><img
+                src="img/home_FILL0_wght300_GRAD0_opsz24.svg"
+                alt="home icon"
+              /><span>Overview</span></a
+            >
+          </li>
+          <li class="nav_el">
+            <a href="#" class="nav_link active"
+              ><img
+                src="img/group_FILL0_wght300_GRAD0_opsz24.svg"
+                alt="home icon"
+              /><span>Patients</span></a
+            >
+          </li>
+          <li class="nav_el">
+            <a href="#" class="nav_link"
+              ><img
+                src="img/calendar_today_FILL0_wght300_GRAD0_opsz24.svg"
+                alt="home icon"
+              /><span>Schedule</span></a
+            >
+          </li>
+          <li class="nav_el">
+            <a href="#" class="nav_link"
+              ><img
+                src="img/chat_bubble_FILL0_wght300_GRAD0_opsz24.svg"
+                alt="home icon"
+              /><span>Message</span></a
+            >
+          </li>
+          <li class="nav_el">
+            <a href="#" class="nav_link"
+              ><img
+                src="img/credit_card_FILL0_wght300_GRAD0_opsz24.svg"
+                alt="home icon"
+              /><span>Transaction</span></a
+            >
+          </li>
+        </ul>
+
+        <div class="profile">
+          <div class="profile_container">
+            <img
+              src="img/senior-woman-doctor-and-portrait-smile-for-health-2023-11-27-05-18-16-utc@2x.jpg"
+              alt="Dr. Jose Simons profile picture"
+            />
+            <div>
+              <p class="profile_tile">Dr. Jose Simmons</p>
+              <p class="profile_position">General practitioner</p>
+            </div>
+          </div>
+
+          <span class="profile_setting">
+            <span>
+              <img
+                src="img/settings_FILL0_wght300_GRAD0_opsz24.svg"
+                alt="setting icon"
+            /></span>
+            <span>
+              <img
+                src="img/more_vert_FILL0_wght300_GRAD0_opsz24.svg"
+                alt="setting icon"
+            /></span>
+          </span>
+        </div>
+      </nav>
+
+      <!-- main -->
+      <div class="grid_container">
+        <div class="patients">
+          <div class="patients_header">
+            <h3>Patients</h3>
+            <img
+              class="grid_icon"
+              src="img/search_FILL0_wght300_GRAD0_opsz24.svg"
+              alt="search icon"
+            />
+          </div>
+
+          <ul class="patients_container">
+            <li class="profile profile_patient">
+              <a href="#" class="profile_container">
+                <img
+                  src="img/Layer 8.jpg"
+                  alt="Dr. Jose Simons profile picture"
+                />
+                <div>
+                  <p class="profile_tile">Emily Williams</p>
+                  <p class="profile_position">Female, 18</p>
+                </div>
+              </a>
+
+              <img
+                src="img/more_horiz_FILL0_wght300_GRAD0_opsz24.svg"
+                alt="icon"
+              />
+            </li>
+
+            <li class="profile profile_patient">
+              <a href="#" class="profile_container">
+                <img
+                  src="img/Layer 1.jpg"
+                  alt="Dr. Jose Simons profile picture"
+                />
+                <div>
+                  <p class="profile_tile">Ryan Johnson</p>
+                  <p class="profile_position">Male, 45</p>
+                </div>
+              </a>
+
+              <img
+                src="img/more_horiz_FILL0_wght300_GRAD0_opsz24.svg"
+                alt="icon"
+              />
+            </li>
+
+            <li class="profile profile_patient">
+              <a href="#" class="profile_container">
+                <img
+                  src="img/Layer 3.jpg"
+                  alt="Dr. Jose Simons profile picture"
+                />
+                <div>
+                  <p class="profile_tile">Ryan Johnson</p>
+                  <p class="profile_position">Male, 36</p>
+                </div>
+              </a>
+
+              <img
+                src="img/more_horiz_FILL0_wght300_GRAD0_opsz24.svg"
+                alt="icon"
+              />
+            </li>
+
+            <li class="profile profile_patient patient-active" id="jesica">
+              <a href="#" class="profile_container" id="jesica_link">
+                <img class="image" src="" alt="" />
+                <div>
+                  <p class="profile_tile name"></p>
+                  <p class="profile_position">
+                    <span class="gender"></span>, <span id="age"></span>
+                  </p>
+                </div>
+              </a>
+
+              <img
+                src="img/more_horiz_FILL0_wght300_GRAD0_opsz24.svg"
+                alt="icon"
+              />
+            </li>
+
+            <li class="profile profile_patient">
+              <a href="#" class="profile_container">
+                <img
+                  src="img/Layer 6.jpg"
+                  alt="Dr. Jose Simons profile picture"
+                />
+                <div>
+                  <p class="profile_tile">Samantha Johnson</p>
+                  <p class="profile_position">Female, 56</p>
+                </div>
+              </a>
+
+              <img
+                src="img/more_horiz_FILL0_wght300_GRAD0_opsz24.svg"
+                alt="icon"
+              />
+            </li>
+
+            <li class="profile profile_patient">
+              <a href="#" class="profile_container">
+                <img
+                  src="img/Layer 12.jpg"
+                  alt="Dr. Jose Simons profile picture"
+                />
+                <div>
+                  <p class="profile_tile">AshleyMartinez</p>
+                  <p class="profile_position">Femal, 54</p>
+                </div>
+              </a>
+
+              <img
+                src="img/more_horiz_FILL0_wght300_GRAD0_opsz24.svg"
+                alt="icon"
+              />
+            </li>
+
+            <li class="profile profile_patient">
+              <a href="#" class="profile_container">
+                <img
+                  src="img/Layer 10.jpg"
+                  alt="Dr. Jose Simons profile picture"
+                />
+                <div>
+                  <p class="profile_tile">Olivia Brown</p>
+                  <p class="profile_position">Female, 32</p>
+                </div>
+              </a>
+
+              <img
+                src="img/more_horiz_FILL0_wght300_GRAD0_opsz24.svg"
+                alt="icon"
+              />
+            </li>
+
+            <li class="profile profile_patient">
+              <a href="#" class="profile_container">
+                <img
+                  src="img/Layer 9.jpg"
+                  alt="Dr. Jose Simons profile picture"
+                />
+                <div>
+                  <p class="profile_tile">Tayler Davis</p>
+                  <p class="profile_position">Male, 19</p>
+                </div>
+              </a>
+
+              <img
+                src="img/more_horiz_FILL0_wght300_GRAD0_opsz24.svg"
+                alt="icon"
+              />
+            </li>
+
+            <li class="profile profile_patient">
+              <a href="#" class="profile_container">
+                <img
+                  src="img/Layer 4.jpg"
+                  alt="Dr. Jose Simons profile picture"
+                />
+                <div>
+                  <p class="profile_tile">Kevin Anderson</p>
+                  <p class="profile_position">Male, 30</p>
+                </div>
+              </a>
+
+              <img
+                src="img/more_horiz_FILL0_wght300_GRAD0_opsz24.svg"
+                alt="icon"
+              />
+            </li>
+
+            <li class="profile profile_patient">
+              <a href="#" class="profile_container">
+                <img
+                  src="img/Layer 5.jpg"
+                  alt="Dr. Jose Simons profile picture"
+                />
+                <div>
+                  <p class="profile_tile">Dylian Thompson</p>
+                  <p class="profile_position">Male, 36</p>
+                </div>
+              </a>
+
+              <img
+                src="img/more_horiz_FILL0_wght300_GRAD0_opsz24.svg"
+                alt="icon"
+              />
+            </li>
+
+            <li class="profile profile_patient">
+              <a href="#" class="profile_container">
+                <img
+                  src="img/Layer 7.jpg"
+                  alt="Dr. Jose Simons profile picture"
+                />
+                <div>
+                  <p class="profile_tile">Nathan Evans</p>
+                  <p class="profile_position">Male, 58</p>
+                </div>
+              </a>
+
+              <img
+                src="img/more_horiz_FILL0_wght300_GRAD0_opsz24.svg"
+                alt="icon"
+              />
+            </li>
+
+            <li class="profile profile_patient">
+              <a href="#" class="profile_container">
+                <img
+                  src="img/pexels-photo-1222271.jpg"
+                  alt="Dr. Jose Simons profile picture"
+                />
+                <div>
+                  <p class="profile_tile">Mike Nolan</p>
+                  <p class="profile_position">Male, 31</p>
+                </div>
+              </a>
+
+              <img
+                src="img/more_horiz_FILL0_wght300_GRAD0_opsz24.svg"
+                alt="icon"
+              />
+            </li>
+          </ul>
+        </div>
+
+        <main class="diagnosis">
+          <div class="diagnosis_history">
+            <h3>Diagnosis History</h3>
+            <div class="diagnosis_presentation">
+              <div class="diagnosis_graph">
+                <div class="diagnosis_canvas">
+                  <canvas
+                    id="myChart"
+                    style="width: 100%; height: 100%"
+                  ></canvas>
+                </div>
+
+                <div class="diagnosis_range">
+                  <div class="diagnosis_range-item diagnosis_range-item-1">
+                    <span class="diagnosis_range-item-header">
+                      <span class="range_dot range_dot-red"></span>
+                      <p class="range_title">Systolic</p>
+                    </span>
+
+                    <p class="range_count range_count-systolic">160</p>
+                    <p class="range_text range_text-systolic">
+                      Higher than Average
+                    </p>
+                  </div>
+
+                  <div class="diagnosis_range-item">
+                    <span class="diagnosis_range-item-header">
+                      <span class="range_dot range_dot-purple"></span>
+                      <p class="range_title">Systolic</p>
+                    </span>
+
+                    <p class="range_count range_count-diastoli">78</p>
+                    <p class="range_text range_text-diastolic">
+                      Lower than Average
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="diagnosis_chart">
+                <div class="diagnosis_chart-bx diagnosis_chart-bx--1">
+                  <img src="img/respiratory rate.svg" alt="respiratory icon" />
+                  <div>
+                    <p>Respiratory Rate</p>
+                    <p class="diagnosis_bold-text"><strong>20 bpm</strong></p>
+                  </div>
+                  <p>Normal</p>
+                </div>
+
+                <div class="diagnosis_chart-bx diagnosis_chart-bx--2">
+                  <img src="img/temperature.svg" alt="heart icon" />
+                  <div>
+                    <p>Temperature</p>
+                    <p class="diagnosis_bold-text"><strong>98.6 F</strong></p>
+                  </div>
+                  <p>Normal</p>
+                </div>
+
+                <div class="diagnosis_chart-bx diagnosis_chart-bx--3">
+                  <img src="img/HeartBPM.svg" alt="heart icon" />
+                  <div>
+                    <p>Heart Rate</p>
+                    <p class="diagnosis_bold-text"><strong>78 bpm</strong></p>
+                  </div>
+                  <p>Lower thanAverage</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="diagnosis_lists">
+            <h3>Diagnosis List</h3>
+
+            <ul class="diagnosis_list">
+              <li class="diagnosis_el">
+                <p>Proble/Diagnosis</p>
+                <p>Description</p>
+                <p>Status</p>
+              </li>
+            </ul>
+          </div>
+        </main>
+
+        <!-- aside -->
+        <aside class="aside">
+          <div class="aside_profile">
+            <figure class="aside_image-cont">
+              <img src="" class="image" alt="jesica-image" />
+              <figcaption>
+                <h2 class="name"></h2>
+              </figcaption>
+            </figure>
+
+            <ul class="aside_list">
+              <li class="aside_list-el">
+                <img src="img/BirthIcon.svg" alt="birth icon" />
+
+                <div class="aside_list-description">
+                  <p>Date of birth</p>
+                  <p class="birth_date"></p>
+                </div>
+              </li>
+
+              <li class="aside_list-el">
+                <img src="img/FemaleIcon.svg" alt="Female icon" />
+
+                <div class="aside_list-description">
+                  <p>Gender</p>
+                  <p class="gender"></p>
+                </div>
+              </li>
+
+              <li class="aside_list-el">
+                <img src="img/PhoneIcon.svg" alt="Phone icon" />
+
+                <div class="aside_list-description">
+                  <p>Contact info.</p>
+                  <p class="contact_infor"></p>
+                </div>
+              </li>
+
+              <li class="aside_list-el">
+                <img src="img/PhoneIcon.svg" alt="Phone icon" />
+
+                <div class="aside_list-description">
+                  <p>Emergency contacts</p>
+                  <p class="emergency_contact"></p>
+                </div>
+              </li>
+
+              <li class="aside_list-el">
+                <img src="img/InsuranceIcon.svg" alt="Insurance icon" />
+
+                <div class="aside_list-description">
+                  <p>Insurance provider</p>
+                  <p class="insurance_provider"></p>
+                </div>
+              </li>
+            </ul>
+
+            <button>Show all information</button>
+          </div>
+
+          <div class="aside_result">
+            <h3>Lab Results</h3>
+
+            <ul class="aside_result-list"></ul>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,149 @@
+@use "../abstract" as a;
+
+.services {
+  background-color: var(--bg-blue--tint);
+  padding: 10rem 0;
+  width: 100%;
+  @include a.flex-col;
+  align-items: center;
+  color: var(--black-tint-6);
+
+  &__sec-header {
+    color: var(--black-tint-7);
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+
+    &--const {
+      font-size: 2.4rem;
+    }
+  }
+
+  &__description {
+    text-align: center;
+    max-width: 100rem;
+    font-size: 1.8rem;
+  }
+
+  &__insp {
+    display: flex;
+    gap: 3rem;
+    margin-bottom: 5rem;
+
+    &--el {
+      box-shadow: var(--box-shadow-50);
+      padding: 2rem 3rem;
+      text-align: center;
+      border: 0.3rem solid transparent;
+      transition: 0.2s ease;
+
+      span {
+        display: block;
+        text-align: center;
+        font-size: 4rem;
+        margin-bottom: 1.5rem;
+      }
+
+      &:hover {
+        border: 0.3rem solid #899bc1;
+      }
+    }
+  }
+
+  &__consultant {
+    width: 60%;
+    box-shadow: var(--box-shadow-50);
+    padding: 2rem;
+
+    &__title {
+      text-align: center;
+      margin-bottom: 3rem;
+      font-size: 3rem;
+      color: var(--black-tint-7);
+    }
+
+    &--charges {
+      display: flex;
+      gap: 5rem;
+    }
+
+    &__descript {
+      text-align: center;
+      font-size: 1.8rem;
+      margin-bottom: 3rem;
+    }
+  }
+
+  &__list {
+    list-style: none;
+    @include a.flex-col;
+    gap: 1rem;
+  }
+
+  @media only screen and (max-width: a.$bp-xlarge) {
+    &__consultant {
+      width: 100%;
+    }
+  }
+
+  @media only screen and (max-width: a.$bp-sm-md) {
+    &__consultant {
+      &--charges {
+        gap: 4rem;
+        flex-wrap: wrap;
+        justify-content: center;
+
+        &-1,
+        &-2 {
+          flex-basis: 30%;
+        }
+
+        &-3 {
+          flex-basis: 40%;
+        }
+      }
+    }
+  }
+
+  @media only screen and (max-width: a.$bp-sm-md-2) {
+    &__consultant {
+      &--charges {
+        &-1,
+        &-2 {
+          flex-basis: 40%;
+        }
+      }
+    }
+  }
+
+  @media only screen and (max-width: a.$bp-sm) {
+    &__insp {
+      width: 100%;
+      justify-content: center;
+
+      &--el {
+        flex-basis: 45%;
+      }
+    }
+  }
+
+  @media only screen and (max-width: a.$bp-sm-2) {
+    &__insp {
+      flex-direction: column;
+
+      &--el {
+        flex-basis: 45%;
+      }
+    }
+    &__consultant {
+      &--charges {
+        flex-direction: column;
+
+        &-1,
+        &-2,
+        &-3 {
+          text-align: center;
+        }
+      }
+    }
+  }
+}

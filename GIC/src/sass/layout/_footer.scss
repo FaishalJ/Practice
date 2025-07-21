@@ -1,0 +1,110 @@
+@use "../abstract" as a;
+
+.footer {
+  padding: 10rem 2rem;
+  background-color: var(--bg-blue--dark);
+
+  @include a.flex-col;
+  gap: 3rem;
+  align-items: center;
+
+  &__list {
+    position: relative;
+    display: flex;
+    gap: 10rem;
+    list-style: none;
+
+    &--el {
+      z-index: 5;
+    }
+
+    &--el:hover span {
+      background-color: var(--clr-main-text);
+    }
+  }
+
+  &__line {
+    position: absolute;
+    display: block;
+    height: 0.2rem;
+    width: 80%;
+    background-color: var(--white);
+    top: 30%;
+    left: 50%;
+    transform: translate(-52%, -50%);
+  }
+
+  &__list--el:hover &__link > p {
+    color: var(--bg-blue--light);
+  }
+
+  &__link {
+    @include a.flex-col;
+    align-items: center;
+    gap: 2rem;
+
+    &:link,
+    &:visited {
+      color: var(--white-2);
+      padding: 0 0.8rem;
+      font-size: 1.6rem;
+      border-radius: 0.9rem;
+      text-decoration: none;
+    }
+
+    span {
+      width: 6rem;
+      height: 6rem;
+      border-radius: 50%;
+      background-color: var(--bg-blue--light);
+      @include a.flex-d;
+      padding: 1rem;
+      font-size: 2rem;
+      transition: all 0.2s ease;
+    }
+  }
+
+  &__copyright {
+    color: var(--white-2);
+    margin-top: 3rem;
+  }
+
+  @media only screen and (max-width: a.$bp-large) {
+    &__line {
+      width: 65%;
+    }
+  }
+
+  @media only screen and (max-width: a.$bp-sm-md-3) {
+    &__line {
+      width: 75%;
+    }
+  }
+  @media only screen and (max-width: a.$bp-sm) {
+    &__list {
+      gap: 8rem;
+    }
+  }
+  @media only screen and (max-width: a.$bp-sm-2) {
+    &__line {
+      width: 69%;
+    }
+    &__list {
+      gap: 4rem;
+    }
+  }
+  @media only screen and (max-width: a.$bp-sm-3) {
+    &__list {
+      gap: 1rem;
+    }
+  }
+  @media only screen and (max-width: a.$bp-sm-4) {
+    &__line {
+      display: none;
+    }
+    &__list {
+      gap: 2rem;
+      flex-direction: column;
+    }
+  }
+}

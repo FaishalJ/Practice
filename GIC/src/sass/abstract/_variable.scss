@@ -1,0 +1,40 @@
+:root {
+  // colors background
+  --white-2: #ffffffb3;
+  --black-tint-5: #777;
+  --black-tint-6: #333; // bac, bord
+  --black-tint-7: #222;
+
+  // colors text
+  --white: #fff;
+  --black-tint-4: #555;
+
+  // box-shadow
+  --box-shadow-50: 2px 2px 5px 0px rgba(0, 0, 0, 0.4);
+  --text-shadow: 2px 2px 4px var(--black-tint-3);
+
+  --bg-main: #3b5998;
+  --bg-blue--dark: #00204a;
+  --bg-text-blue--dark: #0c121e;
+  --bg-blue--light: #1a73e8;
+  --bg-blue--tint: #e8f1fd;
+  --clr-main-text: #036cbf;
+}
+
+// width
+$bp-xlarge: 75em; //1200
+$bp-large: 68.75em; //1100
+$bp-medium: 56.25em; //900
+$bp-sm-md: 50em; //800
+$bp-sm-md-2: 43.75em; //700
+$bp-sm-md-3: 40.625em; //650
+$bp-sm: 34.375em; //550
+$bp-sm-2: 31.25em; //500
+$bp-sm-3: 28.125em; //450
+$bp-sm-4: 25em; //400
+
+// height
+$hp-large: 53.125em; //850
+$hp-sm: 31.25em; //500
+$hp-sm-2: 21.875em; //350
+// @media only screen and (max-width: 600px)

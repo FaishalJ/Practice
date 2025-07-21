@@ -1,0 +1,8 @@
+@use "../abstract" as a;
+
+.title__primary {
+  font-size: 10rem;
+  letter-spacing: 1rem;
+  text-shadow: .5rem .5rem 1rem rgba(0, 0, 0, .8);
+  color: var(--white);
+}

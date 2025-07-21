@@ -1,0 +1,63 @@
+@use "../abstract" as a;
+
+.btn {
+
+  // nav-menu button
+  &__nav {
+    position: fixed;
+    top: 5rem;
+    left: 5rem;
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    background-color: var(--clr-white);
+    cursor: pointer;
+    @include a.flex-d;
+    box-shadow: 0 .2rem .7rem rgba(0, 0, 0, .2);
+    z-index: 10;
+
+    span {
+      width: 3.5rem;
+      height: .2rem;
+      background-color: var(--clr-tint-2);
+      position: absolute;
+    }
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      width: 3.5rem;
+      height: .2rem;
+      background-color: var(--clr-tint-2);
+    }
+
+    &::before {
+      top: 1.5rem;
+    }
+
+    &::after {
+      bottom: 1.5rem;
+    }
+  }
+  // ...................
+}
+
+// SCRIPT
+.container.show .btn__nav {
+  animation: navbtn 1.2s forwards cubic-bezier(.36,-0.33,.52,1.76);
+
+  span {
+    display: none;
+  }
+
+  &::before {
+    transform: rotateZ(-30deg) translateX(-.3rem);
+    transform-origin: right;
+  }
+
+  &::after {
+    transform: rotateZ(27deg) translateX(-.3rem);
+    transform-origin: right;
+  }
+}

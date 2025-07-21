@@ -1,0 +1,538 @@
+@keyframes navbtn {
+  0% {
+    opacity: 0;
+    transform: rotate(0);
+  }
+  80% {
+    opacity: 0;
+    left: 90%;
+  }
+  100% {
+    opacity: 1;
+    transform: rotate(360deg);
+    left: 96%;
+  }
+}
+@keyframes down {
+  0% {
+    transform: translateY(-200%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+@keyframes road {
+  0%, 10% {
+    transform: translateY(0);
+  }
+  15% {
+    transform: translateY(-100%);
+  }
+  20%, 100% {
+    transform: translateY(0);
+  }
+}
+@keyframes baloon {
+  0% {
+    transform: translateZ(40rem);
+    opacity: 1;
+  }
+  40% {
+    transform: translateZ(-500rem) translateX(150rem);
+    opacity: 0.8;
+  }
+  70% {
+    transform: translateZ(-1500rem) translateX(800rem);
+    opacity: 0.6;
+  }
+  80% {
+    transform: translateZ(-50rem) translateX(100rem);
+    opacity: 0.8;
+  }
+  100% {
+    transform: translateZ(40rem);
+    opacity: 1;
+  }
+}
+:root {
+  --clr-blue: #2563CE;
+  --clr-blue-75: #6495ED;
+  --clr-green: #7fffd4;
+  --clr-green-light-1: #afeeee;
+  --clr-orange: #ffa07a;
+  --clr-orange-dark-1: #fb7845;
+  --clr-red: #f08080;
+  --clr-white: #fff;
+  --clr-white-shade-1: #eeeeeed9;
+  --clr-white-shade-2: #eee;
+  --clr-black: #000;
+  --clr-tint-1: #777;
+  --clr-tint-2: #555;
+  --font-primary: "Vollkorn", serif;
+}
+
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  font-size: 62.5%;
+}
+
+body {
+  font-family: var(--font-primary);
+  font-size: 1.6rem;
+  overflow-x: hidden;
+}
+
+.container {
+  box-shadow: 0 0 2rem rgba(0, 0, 0, 0.3);
+  margin: 3.5rem;
+  overflow: hidden;
+}
+
+.title__road {
+  position: absolute;
+  color: var(--clr-blue);
+  top: 4rem;
+  right: 5rem;
+  display: flex;
+  gap: 1rem;
+}
+.title__road span {
+  background-color: var(--clr-white);
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 50%;
+  font-size: 1.8rem;
+  font-weight: 900;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.title__road-1 {
+  animation: road 4s 0.2s ease infinite;
+}
+.title__road-2 {
+  animation: road 4s 0.3s ease infinite;
+}
+.title__road-3 {
+  animation: road 4s 0.4s ease infinite;
+}
+.title__road-4 {
+  animation: road 4s 0.5s ease infinite;
+}
+.title__road-5 {
+  animation: road 4s 0.6s ease infinite;
+}
+.title__road-6 {
+  animation: road 4s 0.7s ease infinite;
+}
+.title__road-7 {
+  animation: road 4s 0.8s ease infinite;
+}
+
+.title__primary {
+  text-transform: uppercase;
+  font-size: 8rem;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.4);
+}
+
+.title__tours {
+  font-size: 8rem;
+  color: var(--clr-blue);
+}
+
+.btn__nav {
+  position: fixed;
+  top: 5rem;
+  left: 5rem;
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+  background-color: var(--clr-white);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0.2rem 0.7rem rgba(0, 0, 0, 0.2);
+  z-index: 10;
+}
+.btn__nav span {
+  width: 3.5rem;
+  height: 0.2rem;
+  background-color: var(--clr-tint-2);
+  position: absolute;
+}
+.btn__nav::before, .btn__nav::after {
+  content: "";
+  position: absolute;
+  width: 3.5rem;
+  height: 0.2rem;
+  background-color: var(--clr-tint-2);
+}
+.btn__nav::before {
+  top: 1.5rem;
+}
+.btn__nav::after {
+  bottom: 1.5rem;
+}
+
+.container.show .btn__nav {
+  animation: navbtn 1.2s forwards cubic-bezier(0.36, -0.33, 0.52, 1.76);
+}
+.container.show .btn__nav span {
+  display: none;
+}
+.container.show .btn__nav::before {
+  transform: rotateZ(-30deg) translateX(-0.3rem);
+  transform-origin: right;
+}
+.container.show .btn__nav::after {
+  transform: rotateZ(27deg) translateX(-0.3rem);
+  transform-origin: right;
+}
+
+.header {
+  position: relative;
+  width: 100%;
+  height: calc(100vh - 7rem);
+  background: linear-gradient(rgba(5, 96, 255, 0.35), rgba(5, 96, 255, 0.35)), url("./images/header-bg.jpg") center/cover no-repeat;
+  perspective: 100rem;
+  overflow: hidden;
+}
+.header__description {
+  position: absolute;
+  color: var(--clr-white);
+  top: 50%;
+  transform: translateY(-50%);
+  left: 15%;
+  width: 35%;
+  text-align: center;
+}
+.header__description p {
+  text-transform: uppercase;
+  font-size: 3rem;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+  letter-spacing: 0.2rem;
+  text-align: center;
+}
+.header img {
+  position: absolute;
+  right: 40rem;
+  animation: baloon 115s infinite;
+}
+
+.nav {
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(4px);
+  padding: 3.5rem 3.5rem 3.5rem 3.5rem;
+  transition: transform 1s cubic-bezier(0.65, 0.49, 0.46, 1.13);
+  z-index: 9;
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  left: -200%;
+  bottom: 0;
+}
+.nav__list {
+  list-style: none;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+}
+.nav__el {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s;
+}
+.nav__el-1 {
+  background-color: rgba(100, 149, 237, 0.85);
+}
+.nav__el-1:hover {
+  background-color: cornflowerblue;
+}
+.nav__el-1:hover a {
+  color: var(--clr-blue);
+}
+.nav__el-2 {
+  background-color: rgba(127, 255, 212, 0.85);
+}
+.nav__el-2:hover {
+  background-color: aquamarine;
+}
+.nav__el-2:hover a {
+  color: var(--clr-blue);
+}
+.nav__el-3 {
+  background-color: rgba(255, 160, 122, 0.85);
+}
+.nav__el-3:hover {
+  background-color: lightsalmon;
+}
+.nav__el-3:hover a {
+  color: var(--clr-blue);
+}
+.nav__el-4 {
+  background-color: rgba(240, 128, 128, 0.85);
+}
+.nav__el-4:hover {
+  background-color: lightcoral;
+}
+.nav__el-4:hover a {
+  color: var(--clr-blue);
+}
+.nav__el-5 {
+  background-color: rgba(175, 238, 238, 0.85);
+}
+.nav__el-5:hover {
+  background-color: paleturquoise;
+}
+.nav__el-5:hover a {
+  color: var(--clr-blue);
+}
+.nav__link:link, .nav__link:visited {
+  color: var(--clr-white);
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 2.8rem;
+  font-weight: 700;
+  transition: all 0.2s;
+}
+
+.container.show .nav {
+  transform: translateX(200%);
+}
+
+.container.show .nav__el-1 {
+  animation: down 1.2s 0.2s ease-in backwards;
+}
+
+.container.show .nav__el-2 {
+  animation: down 1.2s 0.4s ease-in backwards;
+}
+
+.container.show .nav__el-3 {
+  animation: down 1.2s 0.6s ease-in backwards;
+}
+
+.container.show .nav__el-4 {
+  animation: down 1.2s 0.8s ease-in backwards;
+}
+
+.container.show .nav__el-5 {
+  animation: down 1.2s 1s ease-in backwards;
+}
+
+.tours {
+  width: 100%;
+  padding: 8rem 0;
+  display: grid;
+  grid-gap: 10rem;
+  justify-items: center;
+}
+.tours__cards {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+.tours-card {
+  position: relative;
+  width: 35rem;
+  height: 62rem;
+  perspective: 100rem;
+}
+.tours-card-front, .tours-card-back {
+  position: absolute;
+  backface-visibility: hidden;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.2);
+  border-radius: 0.7rem;
+  transition: transform 1s ease;
+}
+.tours-card-front {
+  background-color: var(--clr-white);
+  z-index: 1;
+}
+.tours-card-front img {
+  width: 100%;
+  filter: brightness(80%);
+}
+.tours-card-front h3 {
+  position: absolute;
+  top: 18rem;
+  right: 2rem;
+  color: var(--clr-white);
+  font-size: 2rem;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+  text-transform: uppercase;
+}
+.tours-card-front ul {
+  list-style: none;
+  display: grid;
+  text-align: center;
+  grid-gap: 2rem 0;
+  padding: 4rem;
+  color: var(--clr-tint-2);
+}
+.tours-card-front ul li {
+  border-bottom: 0.1rem solid var(--clr-blue);
+  padding-bottom: 2rem;
+}
+.tours-card-back {
+  background-color: var(--clr-blue);
+  display: grid;
+  align-content: center;
+  justify-content: center;
+  justify-items: center;
+  gap: 3rem;
+  transform: rotateY(180deg);
+}
+.tours-card-back p {
+  color: var(--clr-white);
+  font-size: 5rem;
+}
+.tours-card-back button {
+  color: var(--clr-blue);
+  border: none;
+  background-color: var(--clr-white);
+  padding: 1rem 2rem;
+  border-radius: 10rem;
+  font-size: 2.4rem;
+  font-family: inherit;
+  letter-spacing: 0.2rem;
+  cursor: pointer;
+}
+.tours-card:hover .tours-card-front {
+  transform: rotateY(-180deg);
+}
+.tours-card:hover .tours-card-back {
+  transform: rotateY(0);
+}
+
+.testimonials {
+  width: 100%;
+  padding: 15rem 0;
+  display: grid;
+  grid-gap: 10rem;
+  justify-items: center;
+  position: relative;
+}
+.testimonials video {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.4;
+}
+.testimonials__block {
+  display: flex;
+  gap: 3rem;
+  padding: 4rem;
+  background-color: var(--clr-white);
+  width: 70%;
+  transform: skewX(15deg);
+  overflow: hidden;
+}
+.testimonials__fig {
+  transform: skewX(-15deg);
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 auto;
+  width: 20rem;
+  height: 20rem;
+  border-radius: 50%;
+  clip-path: circle(50% at 50% 50%);
+}
+.testimonials__fig img {
+  height: 100%;
+  transform: scale(1.2);
+  transition: all 0.3s ease-in;
+}
+.testimonials__fig h4 {
+  color: var(--clr-white);
+  position: absolute;
+  bottom: -15%;
+  transition: transform 0.3s ease-in;
+}
+.testimonials__quote {
+  transform: skewX(-15deg);
+}
+.testimonials__block:hover .testimonials__fig h4 {
+  transform: translateY(-560%);
+}
+.testimonials__block:hover .testimonials__fig img {
+  transform: scale(1);
+  filter: blur(2px);
+}
+
+.cta {
+  width: 100%;
+  padding: 20rem 0;
+  display: grid;
+  justify-items: center;
+  grid-gap: 10rem 0;
+  background: url("../images/contact-us-bg.png") no-repeat center/cover;
+}
+.cta h2 {
+  font-size: 6rem;
+  letter-spacing: 0.2rem;
+  color: var(--clr-white);
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.4);
+  text-transform: uppercase;
+}
+
+.form {
+  min-width: 30%;
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 8rem 4rem;
+  display: grid;
+  grid-gap: 2rem;
+  border-radius: 0.8rem;
+}
+.form-div {
+  background-color: rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+  border-radius: 0.5rem;
+}
+.form label {
+  display: block;
+  font-size: 1.4rem;
+}
+.form input,
+.form textarea {
+  width: 100%;
+  border: none;
+  background-color: transparent;
+}
+.form input:focus,
+.form textarea:focus {
+  outline: none;
+}
+.form input[type=submit] {
+  background-color: var(--clr-tint-2);
+  color: var(--clr-white);
+  padding: 1rem;
+}
+.form__email-phone {
+  display: flex;
+  gap: 2rem;
+}
+.form__email, .form__phone {
+  flex: 1;
+}
+
+/*# sourceMappingURL=style.css.map */

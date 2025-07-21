@@ -1,0 +1,15 @@
+@mixin flex-d {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin flex-col {
+  display: flex;
+  flex-direction: column;
+}
+
+@mixin position-l {
+  left: 50%;
+  transform: translateX(-50%);
+}

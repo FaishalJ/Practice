@@ -1,0 +1,15 @@
+{
+  "name": "classic-cars",
+  "version": "1.0.0",
+  "description": "Landing page",
+  "main": "index.js",
+  "scripts": {
+    "compile:sass": "sass src/sass/main.scss src/css/style.css -w"
+  },
+  "keywords": [],
+  "author": "Jaffar",
+  "license": "ISC",
+  "dependencies": {
+    "sass": "^1.68.0"
+  }
+}

@@ -1,0 +1,99 @@
+@use "../abstract" as a;
+
+.header {
+  position: relative;
+  overflow-x: hidden;
+  height: 80vh;
+  background-image: linear-gradient(
+      to right,
+      rgba(16, 17, 18, 0.8) 20%,
+      rgba(16, 17, 18, 0.1)
+    ),
+    url("images/bg-Architect-5.jpg");
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  &__banner {
+    position: absolute;
+    top: 50%;
+    left: 15%;
+    width: 40%;
+    transform: translate(0, -50%);
+    color: var(--white);
+
+    &__about {
+      display: flex;
+      flex-direction: column;
+      gap: 4rem;
+    }
+
+    p {
+      font-size: 2rem;
+    }
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+
+    &:link,
+    &:visited {
+      text-decoration: none;
+      background: var(--bg-main);
+      color: var(--white);
+      font-size: 2rem;
+      font-weight: 600;
+      border: 2px solid var(--white-2);
+      padding: 0.5rem 2rem;
+      letter-spacing: 3px;
+      align-self: flex-start;
+      border-radius: 0.7rem;
+      transition: all 0.2s ease;
+    }
+
+    &:hover,
+    &:active {
+      background-color: #05295b;
+    }
+  }
+
+  @media only screen and (max-width: a.$bp-medium) {
+    background-image: linear-gradient(
+        to right,
+        rgba(16, 17, 18, 0.5),
+        rgba(16, 17, 18, 0.5)
+      ),
+      url("images/bg-Architect-5.jpg");
+
+    &__banner {
+      left: 50%;
+      width: 70%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+    }
+
+    &__link {
+      &:link,
+      &:visited {
+        align-self: center;
+      }
+    }
+  }
+  @media only screen and (max-height: a.$hp-large) {
+    height: 100vh;
+
+    &__banner {
+      width: 60%;
+    }
+  }
+  @media only screen and (max-height: a.$hp-sm-2) {
+    &__banner {
+      top: 55%;
+      width: 70%;
+      &__about {
+        gap: 2rem;
+      }
+    }
+  }
+}

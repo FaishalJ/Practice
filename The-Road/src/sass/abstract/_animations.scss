@@ -1,0 +1,66 @@
+@keyframes navbtn {
+  0% {
+    opacity: 0;
+    transform: rotate(0);
+  }
+
+  80% {
+    opacity: 0;
+    left: 90%;
+  }
+
+  100% {
+    opacity: 1;
+    transform: rotate(360deg);
+    left: 96%;
+  }
+}
+
+// ...................................
+@keyframes down {
+  0% {
+    transform: translateY(-200%);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+// .....................................
+@keyframes road {
+  0%, 10% {
+    transform: translateY(0);
+  }
+  15% {
+    transform: translateY(-100%);
+  }
+  20%, 100% {
+    transform: translateY(0);
+  }
+}
+
+// .....................................
+@keyframes baloon {
+  0% {
+    transform: translateZ(40rem);
+    opacity: 1;
+  }
+  40% {
+    transform: translateZ(-500rem) translateX(150rem);
+    opacity: .8;
+  }
+  70% {
+    transform: translateZ(-1500rem) translateX(800rem);
+    opacity: .6;
+  }
+  80% {
+    transform: translateZ(-50rem) translateX(100rem);
+    opacity: .8;
+  }
+
+  100% {
+    transform: translateZ(40rem);
+    opacity: 1;
+  }
+}

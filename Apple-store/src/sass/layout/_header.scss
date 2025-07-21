@@ -1,0 +1,52 @@
+@use "../abstract" as a;
+
+.header {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  clip-path: polygon(0 0, 100% 0, 100% 95%, 20% 100%, 0 100%);
+  background-size: cover;
+
+  &-container {
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  &-desscription {
+    text-align: center;
+  }
+  &-tex {
+    font-size: 4rem;
+    margin-bottom: 4rem;
+    letter-spacing: .1rem;
+  }
+  &-author {
+    font-size: 3rem;
+    margin-bottom: 5rem;
+  }
+
+  &__slideShow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    div {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      background-size: cover;
+      background-repeat: no-repeat;
+      z-index: -1;
+      opacity: 0;
+      transition: opacity 5s;
+    }
+
+    & div.change {
+      opacity: 1;
+    }
+  }
+}

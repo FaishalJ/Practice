@@ -1,0 +1,64 @@
+@use "../abstract" as a;
+
+// animated title, THEROAD
+.title__road {
+  position: absolute;
+  color: var(--clr-blue);
+  top: 4rem;
+  right: 5rem;
+
+  display: flex;
+  gap: 1rem;
+
+  span {
+    background-color: var(--clr-white);
+    width: 3.5rem;
+    height: 3.5rem;
+    border-radius: 50%;
+    font-size: 1.8rem;
+    font-weight: 900;
+    @include a.flex-d;
+  }
+
+  &-1 {
+    animation: road 4s .2s ease infinite;
+  }
+
+  &-2 {
+    animation: road 4s .3s ease infinite;
+  }
+
+  &-3 {
+    animation: road 4s .4s ease infinite;
+  }
+
+  &-4 {
+    animation: road 4s .5s ease infinite;
+  }
+
+  &-5 {
+    animation: road 4s .6s ease infinite;
+  }
+
+  &-6 {
+    animation: road 4s .7s ease infinite;
+  }
+
+  &-7 {
+    animation: road 4s .8s ease infinite;
+  }
+
+}
+
+// .................................
+.title__primary {
+  text-transform: uppercase;
+  font-size: 8rem;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, .4);
+}
+
+// ..................................
+.title__tours {
+  font-size: 8rem;
+  color: var(--clr-blue);
+}

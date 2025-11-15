@@ -1,0 +1,164 @@
+/*----------------------------------blog.css--------------------------------------------*/
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  font-family: sans-serif;
+  width: 950px;
+  margin: 20px auto;
+  border: 5px solid black;
+  position: relative;
+}
+
+h1 {
+  text-align: center;
+  background: #e0dede;
+  padding: 20px;
+  margin-top: 0;
+  }
+
+.float {
+  background: red;
+  color: white;
+  display: inline-block;
+  padding: 10px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  position: absolute;
+  margin-top: -20px;
+  margin-left: -35px;
+}
+
+.shoes {
+  margin-top: 0;
+}
+
+.price {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.shipment {
+  text-transform: uppercase;
+  font-size: 12px;
+  color: #c9c7c7;
+  margin-bottom: 20px;
+}
+.ready {
+  margin-bottom: 20px;
+}
+
+a {
+  display: inline-block;
+  margin-bottom: 20px;
+}
+a:link {
+  color: black;
+}
+a:hover {
+  text-decoration: none;
+}
+
+.color {
+  width: 22px;
+  height: 22px;
+  background: black;
+  display: inline-block;
+  margin-right: 10px;
+}
+.color {
+  background: black;
+}
+.color-blue {
+  background: blue;
+}
+.color-red {
+  background: red;
+}
+.color-yellow {
+  background: yellow;
+}
+.color-green {
+  background: green;
+}
+.color-brown {
+  background: brown;
+}
+
+h2 {
+  text-transform: uppercase;
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+ul {
+  margin-right: 20px;
+  margin-left: 20px;
+  }
+li {
+  margin-bottom: 10px;
+  list-style: square;
+}
+li:last-child {
+  margin-bottom: none;
+}
+
+.add {
+  width: 100%;
+  color: white;
+  background: black;
+  padding: 20px;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 20px;
+  cursor: pointer;
+}
+.add:hover {
+  background: white;
+  color: black;
+  border-top: solid 5px black;
+}
+
+.shapu {
+  display: flex;
+  justify-content: space-between;
+}
+
+/*.bobi {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+  }
+
+
+.satu {
+    flex: 1;
+}
+.biri {
+  flex: 1;
+}*/
+
+.container {
+  display: grid;
+  grid-template-columns: 300px 1fr 1fr;
+  column-gap: 20px;
+} 
+
+h1 {
+  grid-column: 1 / span2;
+}
+
+.biri {
+  align-self: center;
+}
+
+.satu {
+  align-self: center;
+}
+
+.add {
+  grid-column: 1 / span2;
+}
